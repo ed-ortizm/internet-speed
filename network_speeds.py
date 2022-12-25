@@ -30,15 +30,14 @@ def get_speeds() -> Tuple[float, float]:
 if __name__ == "__main__":
 
     logging.basicConfig(
-        level=logging.INFO, format='%(asctime)s %(message)s',
+        level=logging.INFO, format='%(asctime)s,%(message)s',
         filename='network_speeds.log', filemode='a'
     )
 
     while True:
 
         down_speed, up_speed = get_speeds()
-        logging.info("downSpeed, %f, Mbps", down_speed)
-        logging.info("upSpeed, %f, Mbps", up_speed)
+        logging.info("%f,%f", down_speed, up_speed)
 
         # sleep for 30-60 minutes before the next iteration
         sleep_for = np.random.randint(1800, 3600)
