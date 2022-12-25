@@ -37,10 +37,10 @@ if __name__ == "__main__":
     while True:
 
         down_speed, up_speed = get_speeds()
-        logging.info("Download speed: %f Mbps", down_speed)
-        logging.info("Upload speed: %f Mbps", up_speed)
+        logging.info("downSpeed, %f, Mbps", down_speed)
+        logging.info("upSpeed, %f, Mbps", up_speed)
 
         # sleep for 30-60 minutes before the next iteration
         sleep_for = np.random.randint(1800, 3600)
-
+        print(f"Sleeping for {sleep_for} seconds...", end="\r")
         time.sleep(sleep_for)
