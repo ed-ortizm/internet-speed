@@ -53,7 +53,9 @@ sudo nano /etc/rc.local
 ```
 Add the following line to the file:
 ```bash
-nohup python3 /path/to/script/network_speeds.py &
+#!/bin/bash
+# Run the startup script on startup
+python3 /path/to/script/network_speeds.py &
 ```
 Save the file and exit the text editor.
 Enable the rc.local service with the following command:

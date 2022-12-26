@@ -29,9 +29,11 @@ def get_speeds() -> Tuple[float, float]:
 
 if __name__ == "__main__":
 
+    save_to = "/home/edgar/monitor-internet"
+
     logging.basicConfig(
         level=logging.INFO, format='%(asctime)s,%(message)s',
-        filename='network_speeds.log', filemode='a'
+        filename=f'{save_to}/speeds.log', filemode='a'
     )
 
     while True:
